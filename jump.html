@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="js/jquery.js"></script>
+    <style>
+    </style>
+</head>
+<body>    
+    <img id="pic" src="img/stabillo.png" />
+    <script>
+    (function($){
+        c=0;
+        orientation = "down";
+        function myTimer(c,orientation) {
+            if(c==4500){
+                orientation = "down";
+            }
+            if(c==0){
+                orientation = "up";
+            }
+            if(orientation == "up"){
+                c = c+1;
+            }
+            if(orientation == "down"){
+                c = c-1;
+            }
+            return c;
+        }
+        $("#pic").css("position","relative");
+        setInterval(function(){
+            c=myTimer(c,orientation);
+            $("#pic").css("top",c);
+        },200);
+    }(jQuery))
+    </script>
+</body>
+</html>

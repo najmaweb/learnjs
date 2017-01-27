@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+        test jquery
+
+        <div id="nomor">0</div>
+
+        <div id="test">0</div>
+
+        <input type="text" id="testtextbox" />
+        <script>
+            (function($){
+                setInterval(function(){
+                    //console.log(x);
+                },1000);
+
+
+                $("#nomor").html("najiyah");
+                $("#test").html("ayah");
+                $("#testtextbox").val("hey");
+                $("#testtextbox").keyup(function(){
+                    $("#test").html($("#testtextbox").val());
+                });
+            }(jQuery))
+        </script>
+    </body>
+</html>

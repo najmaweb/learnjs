@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    test makan
+    <div id="umbel">upil</div>
+    <img src="img/savealeppo.jpg"/>
+    <button id="btnrubah">rubah</button>
+
+        <script type="text/javascript">
+        (function($){
+       // alert("Assalamualaikum!!!:D");
+        }(jQuery))
+
+        $("#umbel").html("upil");
+        $("#btnrubah").click(function(){
+            if($("#umbel").html()=="upil"){
+                $("#umbel").html("apel");
+            }else
+            if($("#umbel").html()=="apel"){
+                $("#umbel").html("upil");
+            }
+        })
+        </script>
+    </body>
+</html>
